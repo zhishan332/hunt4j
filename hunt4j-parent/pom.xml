@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.yermoon</groupId>
+    <artifactId>hunt4j-parent</artifactId>
+    <version>1.0-SNAPSHOT</version>
+    <packaging>pom</packaging>
+
+    <name>Yermoon Hunt4j parent</name>
+
+    <description>
+        Yermoon hunt4j is project for search.
+    </description>
+
+    <inceptionYear>2014</inceptionYear>
+    <url>http://www.yermoon.com/</url>
+
+    <developers>
+        <developer>
+            <name>Ken Wang</name>
+            <id>wangqing</id>
+            <email>zhishan99@163.com</email>
+            <url>http://weibo.com/aziqing</url>
+            <organization>JD</organization>
+            <organizationUrl>http://www.jd.com</organizationUrl>
+            <roles>
+                <role>committer</role>
+            </roles>
+        </developer>
+    </developers>
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>junit</groupId>
+                <artifactId>junit</artifactId>
+                <version>4.10</version>
+                <scope>test</scope>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
+    <properties>
+        <maven.compile.source>1.6</maven.compile.source>
+        <maven.compile.target>1.6</maven.compile.target>
+        <maven.encoding.target>UTF-8</maven.encoding.target>
+    </properties>
+
+    <build>
+        <plugins>
+            <plugin>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <configuration>
+                    <source>${maven.compile.source}</source>
+                    <target>${maven.compile.target}</target>
+                    <encoding>${maven.encoding.target}</encoding>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+</project>

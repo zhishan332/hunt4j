@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>com.yermoon</groupId>
+        <artifactId>hunt4j-parent</artifactId>
+        <version>1.0-SNAPSHOT</version>
+        <relativePath>hunt4j-parent/pom.xml</relativePath>
+    </parent>
+
+    <artifactId>hunt4j</artifactId>
+    <version>1.0-SNAPSHOT</version>
+    <packaging>pom</packaging>
+    <name>Yermoon Hunt4j</name>
+    <url>http://com.yermoon.com</url>
+
+    <modules>
+        <module>hunt4j-parent</module>
+        <module>hunt4j-core</module>
+        <module>hunt4j-parser</module>
+        <module>hunt4j-server</module>
+        <module>hunt4j-web</module>
+        <module>hunt4j-parser</module>
+    </modules>
+
+</project>

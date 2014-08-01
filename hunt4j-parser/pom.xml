@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <groupId>com.yermoon</groupId>
+        <artifactId>hunt4j-parent</artifactId>
+        <version>1.0-SNAPSHOT</version>
+        <relativePath>../hunt4j-parent/pom.xml</relativePath>
+    </parent>
+
+    <modelVersion>4.0.0</modelVersion>
+
+    <artifactId>hunt4j-parser</artifactId>
+    <packaging>jar</packaging>
+    <name>Yermoon Hunt4j parser</name>
+    <url>http://com.yermoon.com</url>
+
+    <description>
+        Yermoon hunt4j 的解析包，对html文档进行解析，将页面主要的元素结构化。
+    </description>
+
+    <properties>
+        <commons-lang.version>2.6</commons-lang.version>
+        <jsoup.version>1.7.3</jsoup.version>
+    </properties>
+    <dependencies>
+        <dependency>
+            <groupId>${project.groupId}</groupId>
+            <artifactId>hunt4j-core</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.jsoup</groupId>
+            <artifactId>jsoup</artifactId>
+            <version>${jsoup.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>commons-lang</groupId>
+            <artifactId>commons-lang</artifactId>
+            <version>${commons-lang.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+        </dependency>
+    </dependencies>
+
+</project>
