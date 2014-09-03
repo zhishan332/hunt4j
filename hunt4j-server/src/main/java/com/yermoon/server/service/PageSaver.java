@@ -110,7 +110,7 @@ public class PageSaver {
                 for (Image img : imgs) {
                     long hashcode = HashAlgorithm.MurMurHash.hash(img.getSrc());
                     String newName = hashcode + ".jpg";
-                    boolean flag = imageHandler.saveImage(img.getSrc(), newName);
+                    boolean flag = imageHandler.saveImage(img.getSrc());
                     if (flag) {
                         imgList.add(newName);
                         if (i == 0) cover = newName;

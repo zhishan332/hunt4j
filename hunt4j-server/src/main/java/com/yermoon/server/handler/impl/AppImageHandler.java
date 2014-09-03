@@ -2,6 +2,7 @@ package com.yermoon.server.handler.impl;
 
 import com.yermoon.hunt4j.core.http.SimpleDownLoader;
 import com.yermoon.server.handler.ImageHandler;
+import com.yermoon.server.helper.HashAlgorithm;
 import org.apache.commons.lang.StringUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -25,10 +26,12 @@ public class AppImageHandler implements ImageHandler {
     private int minSize;
 
     @Override
-    public boolean saveImage(String imgUrl, String newName) {
+    public boolean saveImage(String imgUrl) {
         SimpleDownLoader downLoader = new SimpleDownLoader(16);
         if (StringUtils.isBlank(imgUrl)) return false;
         File file;
+        long hashcode = HashAlgorithm.MurMurHash.hash(imgUrl);
+        String newName = hashcode + ".jpg";
         String path = savePath + File.separator + newName;
         File ff = new File(path);
         if (ff.exists()) return true;

@@ -7,5 +7,5 @@ package com.yermoon.server.handler;
  * @since 1.0.0
  */
 public interface ImageHandler {
-    boolean saveImage(String url, String newName);
+    boolean saveImage(String url);
 }
