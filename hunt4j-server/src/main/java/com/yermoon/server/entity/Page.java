@@ -16,6 +16,7 @@ public class Page implements Serializable {
     private int imgNum;
     private long cuserId;
     private String cusername;
+    private String url;
     private long cdate;
     private long udate;
 
@@ -89,6 +90,14 @@ public class Page implements Serializable {
 
     public void setUdate(long udate) {
         this.udate = udate;
+    }
+
+    public String getUrl() {
+        return url;
+    }
+
+    public void setUrl(String url) {
+        this.url = url;
     }
 
     @Override

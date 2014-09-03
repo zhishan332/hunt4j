@@ -64,10 +64,12 @@ public class PageDaoMysqlImpl extends AbstractDao implements PageDao {
 
     @Override
     public List<Page> find(String keyWord, int start, int limit) {
-        String sql = "select id,title,url,description,udate,imgnum,imgurl from page where " +
-                "description like '%" + keyWord + "%' or title like '%" + keyWord + "%' order by udate desc  limit ?,?";
+        String sql = "select a.id,a.title,a.udate,a.imgnum,b.orgurl url from page a " +
+                " left join page_ext b on a.pageid=b.pageid where " +
+                "a.title like '%" + keyWord + "%' order by a.udate desc  limit ?,?";
         if (StringUtils.isBlank(keyWord)) {
-            sql = "select id,title,url,description,udate,imgnum,imgurl from page order by udate desc limit ?,?";
+            sql = "select  a.id,a.title,a.udate,a.imgnum,b.orgurl url  from page a " +
+                    " left join page_ext b on a.pageid=b.pageid  order by a.udate desc limit ?,?";
         }
         log.debug("查询SQL:" + sql);
         List<Map<String, Object>> list = jdbcTemplate.queryForList(sql, Integer.valueOf(start), Integer.valueOf(limit));
@@ -79,6 +81,7 @@ public class PageDaoMysqlImpl extends AbstractDao implements PageDao {
             page.setTitle(String.valueOf(map.get("title")));
             page.setUdate(Long.parseLong(String.valueOf(map.get("udate"))));
             page.setImgNum(Integer.parseInt(String.valueOf(map.get("imgnum"))));
+            page.setUrl(String.valueOf(map.get("url")));
             resList.add(page);
         }
         log.debug("查询结果：" + resList.size());

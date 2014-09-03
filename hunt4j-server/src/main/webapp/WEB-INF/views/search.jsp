@@ -18,13 +18,13 @@
     <link rel="stylesheet" href="../../statics/all.css"/>
     <link href="../../statics/page-bar.css" rel="stylesheet" type="text/css"/>
     <%--<link href='http://fonts.googleapis.com/css?family=Rokkitt' rel='stylesheet' type='text/css'>--%>
-    <title>图豹-服务器</title>
+    <title>猎豹搜索-服务器</title>
 
 </head>
 <body>
 
 <div class="findbox">
-    <span class="glow in tlt logospan">图豹</span>
+    <span class="glow in tlt logospan">猎豹搜索</span>
     <%
         String key = URLDecoder.decode(request.getParameter("keyword") == null ? "" : request.getParameter("keyword"), "utf-8");
     %>
@@ -46,7 +46,7 @@
                     int num = data.getImgNum();
                     String numStr = " [" + num + "P]";
                     String desc = "";
-                    String url = "";
+                    String url = data.getUrl();
                     if (title.length() > 44) title = title.substring(0, 44) + "src/test";
                     title = PageHelper.addStrongTag(title, key);
                     desc = PageHelper.addStrongTag(desc, key);

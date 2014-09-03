@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="../../statics/all.css"/>
     <link href="../../statics/page-bar.css" rel="stylesheet" type="text/css"/>
     <%--<link href='http://fonts.googleapis.com/css?family=Rokkitt' rel='stylesheet' type='text/css'>--%>
-    <title>图豹-列表</title>
+    <title>猎豹搜索-列表</title>
 </head>
 <body>
 <div class="reslist">
